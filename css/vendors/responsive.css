@@ -1,0 +1,60 @@
+@media (max-width: 1199px) {
+	.teachers .shadow-box .img-container,
+	.teachers .shadow-box .img-container img {
+	    width: 177px;
+	    height: 177px;
+	}
+
+}
+
+
+@media (max-width: 991px) {
+
+	header .hdr-contact {
+	    text-align: center;
+	    padding-top: 14px;
+	    padding-bottom: 15px;
+	}
+	.teachers .shadow-box {
+		margin-bottom: 30px;
+	}
+
+	.teachers .shadow-box .img-container,
+	.teachers .shadow-box .img-container img {
+	    width: 300px;
+	    height: 300px;
+	}
+}
+
+@media (max-width: 767px) {
+	.teachers .shadow-box {
+		max-width: 350px;
+	}
+}
+
+@media (max-width: 424px) { 
+
+	header .logo {
+		float: none;
+	}
+	.socials {
+	    text-align: center;
+	}
+	.socials ul {
+	    padding-left: 0;
+	}
+	.teachers .shadow-box {
+		max-width: auto;
+	}
+	.teachers .shadow-box .img-container {
+		width: 95%;
+		height: 95%;
+	}
+	.teachers .shadow-box .img-container img {
+	    width: 100%;
+	    height: 100%;
+	}
+	.dances .dance a {
+		font-size: 40px;
+	}
+}

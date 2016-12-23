@@ -1,6 +1,9 @@
-// Initialize animation on scroll 
-AOS.init({
-	data-aos-once: true,
-	disable: 'mobile',
-});
+/*
+$( document ).ready(function(){
 
+	
+	AOS.init({
+		
+	});
+
+});*/
