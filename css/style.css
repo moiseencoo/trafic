@@ -90,6 +90,47 @@ a, a:hover, a:focus {
   box-shadow: 0 0 10px #888888;
   background-color: white; }
 
+.hdr-contact {
+  text-align: right;
+  padding-top: 25px; }
+  .hdr-contact a {
+    display: inline;
+    margin-left: 30px;
+    vertical-align: middle; }
+  .hdr-contact a.hdr-contact-phone {
+    font-size: 30px;
+    font-family: "PFDinTextCondPro", sans-serif;
+    color: #043f6b; }
+  .hdr-contact a.round-btn {
+    border-radius: 20px;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-family: "BebasNeueRegular", sans-serif;
+    font-size: 19px;
+    text-align: center;
+    color: #0a4f93;
+    border: 1px solid #0a4f93; }
+    .hdr-contact a.round-btn:hover {
+      color: white;
+      background-color: #0a4f93; }
+  .hdr-contact .icon-wrap {
+    border: 1px solid #0a4f93;
+    color: #0a4f93;
+    margin-bottom: -10px;
+    margin-right: 7px; }
+    .hdr-contact .icon-wrap:hover {
+      background: #0a4f93;
+      color: white; }
+    .hdr-contact .icon-wrap i {
+      position: absolute;
+      top: 48%;
+      transform: translateY(-50%);
+      text-align: center;
+      left: 50%;
+      margin-left: -13px;
+      width: 26px;
+      font-size: 20px; }
+
 header {
   padding-top: 10px; }
   header .container {
@@ -123,13 +164,7 @@ header {
   header .hdr-contact {
     text-align: right;
     padding-top: 25px; }
-    header .hdr-contact a {
-      display: inline;
-      margin-left: 30px;
-      vertical-align: middle; }
     header .hdr-contact a.hdr-contact-phone {
-      font-size: 30px;
-      font-family: "PFDinTextCondPro", sans-serif;
       color: #043f6b; }
     header .hdr-contact a.round-btn {
       border-radius: 20px;
@@ -433,9 +468,23 @@ header {
         margin-bottom: -11px; }
 
 .news-responses {
+  padding: 50px 0;
   background: transparent url("../img/news-bg.png") right top no-repeat; }
   .news-responses .shadow-box img {
     width: 100%; }
+  .news-responses .ul-news {
+    text-align: center;
+    padding-bottom: 30px; }
+    .news-responses .ul-news li {
+      display: inline;
+      margin: 0 15px; }
+      .news-responses .ul-news li a {
+        font-family: "BebasNeueRegular", sans-serif;
+        color: #31acff;
+        font-size: 50px; }
+      .news-responses .ul-news li a.active {
+        color: #287ab8;
+        text-decoration: underline; }
   .news-responses .news-text {
     padding: 15px; }
     .news-responses .news-text p.date {
@@ -467,6 +516,8 @@ header {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical; }
+  .news-responses .more {
+    margin-top: -60px; }
   .news-responses .learn-more {
     border-radius: 20px;
     padding: 7px 20px;
@@ -482,5 +533,79 @@ header {
       color: white;
       background-color: #f24934;
       border-color: #f24934; }
+
+.carousel-control.right {
+  background: transparent url(../img/icons/icon-next.png) no-repeat;
+  width: 40px;
+  opacity: 1;
+  top: 92%;
+  right: 10px; }
+  .carousel-control.right:hover {
+    background: transparent url(../img/icons/icon-next-active.png) no-repeat; }
+
+.carousel-control.left {
+  background: transparent url(../img/icons/icon-prev.png) no-repeat;
+  width: 40px;
+  opacity: 1;
+  top: 92%;
+  left: auto;
+  right: 60px; }
+  .carousel-control.left:hover {
+    background: transparent url(../img/icons/icon-prev-active.png) no-repeat; }
+
+.carousel-inner {
+  padding: 50px 0 80px 0; }
+
+footer {
+  background-color: #043f6b; }
+  footer .ftr-nav {
+    column-count: 2; }
+    footer .ftr-nav li {
+      list-style: none; }
+      footer .ftr-nav li a {
+        color: white;
+        font-size: 18px;
+        font-family: "PFDinTextCondPro", sans-serif; }
+        footer .ftr-nav li a:hover {
+          color: #287ab8; }
+    footer .ftr-nav li.active a {
+      color: #2980b9; }
+  footer .hdr-contact {
+    text-align: right;
+    padding-top: 25px; }
+    footer .hdr-contact a {
+      display: inline;
+      margin-left: 30px;
+      vertical-align: middle;
+      color: white; }
+    footer .hdr-contact a.hdr-contact-phone {
+      color: white; }
+    footer .hdr-contact a.round-btn {
+      border-radius: 20px;
+      padding: 7px 20px;
+      text-transform: uppercase;
+      font-family: "BebasNeueRegular", sans-serif;
+      font-size: 19px;
+      text-align: center;
+      color: white;
+      border: 1px solid #bed7ea; }
+      footer .hdr-contact a.round-btn:hover {
+        color: white;
+        background-color: #bed7ea; }
+    footer .hdr-contact .icon-wrap {
+      border: 1px solid #bed7ea;
+      color: #bed7ea; }
+      footer .hdr-contact .icon-wrap:hover {
+        background: #bed7ea;
+        color: white; }
+      footer .hdr-contact .icon-wrap i {
+        position: absolute;
+        top: 48%;
+        transform: translateY(-50%);
+        text-align: center;
+        left: 50%;
+        margin-left: -13px;
+        width: 26px;
+        font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

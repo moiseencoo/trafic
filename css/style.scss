@@ -156,6 +156,48 @@ a, a:hover, a:focus {
 	background-color: white;
 }
 
+.hdr-contact {
+	text-align: right;
+	padding-top: 25px;
+
+	a {
+		display: inline;
+		margin-left: 30px;
+		vertical-align: middle;
+	}
+	a.hdr-contact-phone {
+		font-size: 30px;
+		font-family: $text-font;
+		color: $ternary-color;
+
+	}
+	a.round-btn {
+		@include round-btn;
+		color: $links-color;
+		border: 1px solid $links-color;
+
+		&:hover {
+			color: white;
+			background-color: $links-color;
+		}
+	}
+	.icon-wrap {
+	    border: 1px solid $links-color;
+	    color: $links-color;
+	    margin-bottom: -10px;
+	    margin-right: 7px;
+
+		&:hover {
+			background: $links-color;
+			color: white;
+		}
+
+	    i {
+	    	@include icon;
+	    }
+	}
+	
+}
 header {
 	padding-top: 10px;
 
@@ -208,16 +250,9 @@ header {
 		text-align: right;
 		padding-top: 25px;
 
-		a {
-			display: inline;
-			margin-left: 30px;
-			vertical-align: middle;
-		}
+		
 		a.hdr-contact-phone {
-			font-size: 30px;
-			font-family: $text-font;
 			color: $ternary-color;
-
 		}
 		a.round-btn {
 			@include round-btn;
@@ -600,13 +635,33 @@ header {
 }
 
 .news-responses {
+	padding:50px 0;
 	background:transparent url('../img/news-bg.png') right top no-repeat;
 	.shadow-box {
 		img {
 			width: 100%;
 		}
 	}
+	.ul-news {
+		text-align: center;
+		padding-bottom: 30px;
 
+		li {
+			display: inline;
+			margin: 0 15px;
+
+			a {
+				font-family: $heading-font;
+				color: $btn-color;
+				font-size: 50px;
+			}
+
+			a.active {
+				color: $main-color;
+				text-decoration: underline;
+			}
+		}
+	}
 	.news-text {
 		padding: 15px;
 
@@ -651,7 +706,9 @@ header {
 
 		   } 
 		}  
-
+	.more {
+		margin-top: -60px;
+	}
 	.learn-more {
 		@include round-btn;
 		border: 1px solid $ternary-color;
@@ -669,4 +726,100 @@ header {
 		}
 	}          
 	
+}
+
+.carousel-control.right {
+	background: transparent url(../img/icons/icon-next.png) no-repeat;
+	width: 40px;
+	opacity: 1;
+	top: 92%;
+	right: 10px;
+
+	&:hover {
+		background: transparent url(../img/icons/icon-next-active.png) no-repeat;
+	}
+}
+.carousel-control.left {
+	background: transparent url(../img/icons/icon-prev.png) no-repeat;
+	width: 40px;
+	opacity: 1;
+	top: 92%;
+	left: auto;
+	right: 60px; 
+
+	&:hover {
+		background: transparent url(../img/icons/icon-prev-active.png) no-repeat;
+	}
+}
+
+.carousel-inner {
+	padding: 50px 0 80px 0;
+}
+
+footer {
+	background-color: $ternary-color;
+
+	.ftr-nav {
+		
+		column-count:2;	
+		li {		
+			list-style: none;
+
+			a {
+				color: white;
+				font-size: 18px;
+				font-family: $text-font;
+
+				&:hover {
+					color: $main-color;
+				}
+			
+			}
+		}
+		li.active {
+			a {				
+				color: $bg-color;
+			}
+		}
+	}
+
+	.hdr-contact {
+		text-align: right;
+		padding-top: 25px;
+
+		a {
+			display: inline;
+			margin-left: 30px;
+			vertical-align: middle;
+			color: white;
+		}
+		a.hdr-contact-phone {
+			color: white;
+
+		}
+		a.round-btn {
+			@include round-btn;
+			color:white;
+			border: 1px solid #bed7ea;
+
+			&:hover {
+				color: white;
+				background-color: #bed7ea;
+			}
+		}
+		.icon-wrap {
+		    border: 1px solid #bed7ea;
+		    color: #bed7ea;
+
+			&:hover {
+				background: #bed7ea;
+				color: white;
+			}
+
+		    i {
+		    	@include icon;
+		    }
+		}
+		
+	}
 }
