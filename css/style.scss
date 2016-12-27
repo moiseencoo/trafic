@@ -558,10 +558,9 @@ header {
 	
 	.white-bg {
 		background-color: rgba(255, 255, 255, .5);
-		margin-top: 50px;
 
 		.container {
-			padding-top: 90px;
+			padding-top: 80px;
 			padding-bottom: 100px;
 		}
 	}
@@ -572,11 +571,13 @@ header {
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 30px;
+		position: relative;
 
 
 		span {
 			color: white;
 			padding: 3px 8px;
+			text-transform: none;
 		}
 
 		.red-bg {
@@ -585,19 +586,28 @@ header {
 
 		.blue-bg{
 			background-color: $bg-color;
+			padding: 10px 15px;
 		}
 
+		#old-price {
+			text-decoration: line-through;
+			position: absolute;
+			top: -43px;
+			right: 27%;
+			color: $text-color;
 
+		}
 	}
 	.txt60 {
 		text-transform: none;
 		line-height: 50px;
 		font-size: 60px;
+		margin-bottom: 55px;
 	}
 
 	form.form-signing {
-		padding-top: 50px;
-		width: 88%;
+		padding-top: 15px;
+		width: 84%;
 		border: 25px solid $bg-color;
 		background: $bg-color url(../img/form-decor.png) center top repeat-x;
 		h2 {
@@ -605,7 +615,8 @@ header {
 			color: white;
 			text-transform: uppercase;
 			text-align: center;
-			font-sizee: 23px;
+			font-size: 23px;
+			padding: 0 30px 15px 30px;
 		}
 		input[type="text"] {
 			display: block;
@@ -635,16 +646,23 @@ header {
 }
 
 .news-responses {
-	padding:50px 0;
-	background:transparent url('../img/news-bg.png') right top no-repeat;
+	padding:40px 0;
+	background:transparent url('../img/news-bg.png') right center no-repeat;
 	.shadow-box {
 		img {
 			width: 100%;
 		}
+		p.date {
+			font-family: $text-font;
+			font-size: 15px;
+			color: #3a3d41;
+		}
+
 	}
 	.ul-news {
 		text-align: center;
 		padding-bottom: 30px;
+		position: relative;
 
 		li {
 			display: inline;
@@ -661,15 +679,31 @@ header {
 				text-decoration: underline;
 			}
 		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			background: transparent url(../img/hdr-decor-left.png) no-repeat;
+			width: 181px;
+			height: 21px;
+			top: 27px;
+			left: 220px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			background: transparent url(../img/hdr-decor-right.png) no-repeat;
+			width: 181px;
+			height: 21px;
+			top: 27px;
+			right: 190px;
+		}
 	}
 	.news-text {
 		padding: 15px;
 
-		p.date {
-			font-family: $text-font;
-			font-size: 15px;
-			color: #3a3d41;
-		}
+		
 
 		h3 {
 			font-size: 24px;
@@ -708,6 +742,8 @@ header {
 		}  
 	.more {
 		margin-top: -60px;
+		position: relative;
+		z-index: 1000000;
 	}
 	.learn-more {
 		@include round-btn;
@@ -724,7 +760,52 @@ header {
 			background-color: $accent-color;
 			border-color: $accent-color;
 		}
-	}          
+	}   
+
+	#responses-tab {
+		.shadow-box {
+			position: relative;
+			
+			&:after {
+				content: '';
+				background:transparent url('../img/icons/speach-shadow.png') no-repeat;	
+				width: 37px;
+				height: 35px;
+				position: absolute;
+				bottom: -34px;
+				left: 277px;
+			}
+
+			.response-blue-area {
+				background-color: #f0f5f8;
+				padding: 15px;
+				overflow: auto;
+
+				img {
+					width: 115px;
+					border: 5px solid white;
+					margin-right: 15px;
+					float: left;
+
+				}
+				p.date {
+					margin-top:30px;
+					padding: 0;
+				}
+				p.client-name {
+					font-size: 22px;
+					padding: 0;					
+				}
+			}
+
+			p {
+				font-size:17px;
+				font-family: $text-font;
+				color: #3a3d41;
+				padding: 20px;
+			}
+		}
+	}       
 	
 }
 
@@ -732,7 +813,7 @@ header {
 	background: transparent url(../img/icons/icon-next.png) no-repeat;
 	width: 40px;
 	opacity: 1;
-	top: 92%;
+	top: 91%;
 	right: 10px;
 
 	&:hover {
@@ -743,7 +824,7 @@ header {
 	background: transparent url(../img/icons/icon-prev.png) no-repeat;
 	width: 40px;
 	opacity: 1;
-	top: 92%;
+	top: 91%;
 	left: auto;
 	right: 60px; 
 
@@ -753,17 +834,25 @@ header {
 }
 
 .carousel-inner {
-	padding: 50px 0 80px 0;
+	padding-bottom: 80px;
 }
 
 footer {
 	background-color: $ternary-color;
+	padding-top: 50px;
+	padding-bottom: 30px;
+
+	.col-md-5 {
+		position: relative;
+	}
 
 	.ftr-nav {
-		
+		-webkit-column-count: 2;
+		 -moz-column-count: 2; 
 		column-count:2;	
 		li {		
-			list-style: none;
+			list-style: none;			
+			position: relative;
 
 			a {
 				color: white;
@@ -772,15 +861,45 @@ footer {
 
 				&:hover {
 					color: $main-color;
+
+					&:before {
+						content: '';
+						background:url('../img/icons/ftr-hover.png') no-repeat;
+						width: 10px;
+						height: 10px;
+						left: -13px;
+						top: 7px;
+						position: absolute;
+					}
 				}
+			}			
 			
-			}
 		}
 		li.active {
 			a {				
 				color: $bg-color;
 			}
 		}
+	}
+
+	.socials  {
+		padding-top: 25px;
+
+		li {
+			border: 1px solid #bed7ea;
+			color: $links-color;
+			
+			a {
+				color: #bed7ea;
+			}
+
+			&:hover, &:hover a{
+				background: #bed7ea;
+				color: $ternary-color;
+			}
+
+		}
+
 	}
 
 	.hdr-contact {
@@ -803,7 +922,7 @@ footer {
 			border: 1px solid #bed7ea;
 
 			&:hover {
-				color: white;
+				color: $ternary-color;
 				background-color: #bed7ea;
 			}
 		}
@@ -821,5 +940,27 @@ footer {
 		    }
 		}
 		
+	}
+
+	p.question {
+		color: $accent-color;
+		font-size: 18px;
+		font-family: $text-font;
+		position: absolute;
+		left: 150px;
+	}
+
+	.copyrights {
+		color: white;
+		font-family: $text-font;
+		font-size: 15px;
+		margin-top: 15px;
+
+		a {
+			color: white;
+			font-family: $text-font;
+			font-size: 15px;
+			display: block;
+		}
 	}
 }

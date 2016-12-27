@@ -5,6 +5,26 @@
 	    height: 177px;
 	}
 
+	.about .page-hdr::before
+	 {
+		left: 200px;
+	}
+	.about .page-hdr::after {
+		right: 200px;
+	}
+	.teachers .page-hdr::before {
+		left: 140px;
+	}
+	.teachers .page-hdr::after {
+		right: 140px;
+	}
+	.news-responses .ul-news::before {
+		left: 130px;
+	}
+	.news-responses .ul-news::after {
+		right: 90px;
+	}
+
 }
 
 
@@ -24,11 +44,106 @@
 	    width: 300px;
 	    height: 300px;
 	}
+
+	.banner img{
+		display: block;
+		margin: 0px auto;
+		width: 60%;
+	}
+	.banner .banner-txt span {
+		text-align: center;
+		font-size: 55px;
+	}
+	.about .page-hdr::before
+	 {
+		left: 90px;
+	}
+	.about .page-hdr::after {
+		right: 90px;
+	}
+	.teachers .page-hdr::before {
+		left: 30px;
+	}
+	.teachers .page-hdr::after {
+		right: 30px;
+	}
+
+	.news-responses .ul-news::before {
+		left: 10px;
+	}
+	.news-responses .ul-news::after {
+		right: -25px;
+	}
+
+	footer .col-md-3  a{		
+		text-align: center;
+		display: block;	
+	}
+	.copyrights {
+		text-align: center;
+	}
+	footer .ftr-nav {
+		padding-left: 0;
+	}
+
+	footer .hdr-contact a.round-btn {
+		margin-top: 10px;
+		display: inline-block;
+	}
+	footer p.question {
+		left: 256px;
+	}
+	.prices form.form-signing {
+		width: 60%;
+		margin: 0 auto;
+	}
+	
+	.navigation {
+		display: none;
+	}
+	header {
+		padding-bottom: 20px;
+	}
+
 }
 
 @media (max-width: 767px) {
 	.teachers .shadow-box {
 		max-width: 350px;
+	}
+
+	.banner .banner-txt {
+		font-size: 25px;
+	}
+	.banner .banner-txt span  {
+		font-size: 40px;
+	}
+	.banner .inline {
+		display: none;
+	}
+	.sign {
+		margin-left: 63px;
+	}
+	footer p.question {
+		left: auto;
+		right: 15px;
+	}
+
+	.about .page-hdr::before,
+	.about .page-hdr::after,
+	.teachers .page-hdr::before,
+	.teachers .page-hdr::after,
+	.news-responses .ul-news::before,
+	.news-responses .ul-news::after {
+		display: none;
+	}
+
+
+}
+
+@media (max-width: 650px) {
+	footer .col-xs-6 {
+		width: 100%;
 	}
 }
 
