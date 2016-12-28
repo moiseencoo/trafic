@@ -24,3 +24,13 @@ $('ul.ul-news').each(function(){
             e.preventDefault();
           });
         });
+
+jQuery.scrollSpeed(100, 800);
+
+jQuery(document).ready(function($){
+	$('.crsl-items').carousel({
+		    visible: 4,
+		   
+		    itemMargin: 10,
+	});
+});
